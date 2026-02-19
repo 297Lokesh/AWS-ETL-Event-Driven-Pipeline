@@ -1,15 +1,23 @@
 Project Description 
 
-This project implements a serverless, 
-event-driven data processing pipeline on AWS to
-automate the transformation of raw JSON data into a 
-structured format for analytical querying. Incoming 
-JSON files are uploaded to an Amazon S3 bucket, which
-triggers an AWS Lambda function to process and flatten
-the data and convert it into Parquet format. 
-The generated Parquet files are stored in a destination 
-S3 folder, which then triggers an AWS Glue Crawler to automatically 
-extract metadata and update the Glue Data Catalog. Finally, 
-Amazon Athena is used to perform SQL-based queries directly on
-the processed data stored in S3, enabling efficient and scalable
-data analysis without the need for database infrastructure.
+Developed a serverless, event-driven data processing pipeline on AWS.
+
+Raw JSON data is uploaded into an Amazon S3 bucket.
+
+S3 upload event automatically triggers an AWS Lambda function.
+
+Lambda reads and flattens the nested JSON data.
+
+Flattened data is converted into Parquet format for efficient storage.
+
+Generated Parquet files are stored in a destination S3 folder.
+
+Storage of Parquet files triggers AWS Glue Crawler.
+
+Glue Crawler scans the data and extracts metadata automatically.
+
+Extracted schema is stored in the AWS Glue Data Catalog.
+
+Amazon Athena is used to perform SQL queries directly on processed data in S3.
+
+Enables scalable, cost-effective analytics without managing database infrastructure.
